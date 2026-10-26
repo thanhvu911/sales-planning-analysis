@@ -1,73 +1,72 @@
-<img width="1704" height="1312" alt="image" src="https://github.com/user-attachments/assets/fbd4701f-b4f5-4039-847d-b2f5f0c1134b" />📊 Sales Planning Analysis Project
-Date: August 2025
-Tools: Power BI, Excel, DAX, SQL Server
+# Sales Planning Analysis (Power BI · Galaxy Schema)
 
-📌 Overview
-This project delivers a Sales Performance Dashboard in Power BI, designed to help executives and regional managers track sales KPIs against monthly plans across different stores, product groups, and regions.
+A Power BI dashboard (Aug 2025) for the KPIM Mart retail chain that compares **actual sales against monthly plans** by store, product group, region, and time, so managers can see who is on track and where targets are at risk.
 
-The dashboard integrates actual sales data and monthly plan data from SQL Server using a Galaxy Schema design, enabling multi-dimensional analysis over time and across locations.
+![Power BI](https://img.shields.io/badge/Power%20BI-F2C811?style=flat&logo=powerbi&logoColor=black)
+![DAX](https://img.shields.io/badge/DAX-742774?style=flat)
+![SQL Server](https://img.shields.io/badge/SQL%20Server-CC2927?style=flat&logo=microsoftsqlserver&logoColor=white)
 
-🎯 Objectives
-Provide real-time KPI tracking for sales performance.
+## Business questions
+- Which stores, regions, and product groups are meeting their monthly plan, and which are falling behind?
+- How is performance trending year over year and over the last 12 months?
 
-Compare actual vs. planned sales to monitor completion rates.
+## Data model: galaxy schema
+Two fact tables share conformed dimensions, so actual and planned figures can be compared at any grain:
 
-Identify year-over-year trends and growth opportunities.
+- **Facts:** Sales (about 58K transaction lines) and Plan (monthly targets)
+- **Dimensions:** Store, Product, Category, Customer, Promotion, Date
 
-Allow filtering by store, product group, region, and time period for granular insights.
+## Key measures (DAX)
+- Plan completion % = Actual ÷ Plan
+- Year-over-year growth %
+- Rolling 12-month trend
+- Store and region rankings
 
-🛠️ Data Sources & Architecture
-SQL Server:
+## Report features
+KPI cards · actual-vs-plan monthly trend · store ranking · product-group and regional breakdowns · slicers and drill-through to store detail
 
-Sales Fact Table (actual transaction data)
+## Files
+| File | Description |
+|---|---|
+| `KPIM Mart Sales Report Datathon 3.pbix` | Main report |
+| `Capstone Project.pbix` | Extended version of the report |
+| `KPIM Mart Data.xlsx` | Source data and data dictionary |
 
-Plan Fact Table (monthly sales targets)
+## How to open
+Open either `.pbix` file in Power BI Desktop. If prompted, point the data source to `KPIM Mart Data.xlsx`.
 
-Dimension Tables: Store, Product, Region, Time
+## Skills demonstrated
+Galaxy-schema modeling · DAX time intelligence · Power Query data preparation · executive dashboard design
 
-Galaxy Schema:
+## Power BI dashboard
 
-Separate fact tables for Actual Sales and Sales Plans linked to shared dimensions.
+<img src="https://github.com/user-attachments/assets/fbd4701f-b4f5-4039-847d-b2f5f0c1134b" alt="Power BI dashboard page 1" width="900"/>
 
-Power Query: Used to clean, merge, and shape data from SQL Server.
+<img src="https://github.com/user-attachments/assets/3b11928f-2851-4abe-a450-519c5c9b93f9" alt="Power BI dashboard page 2" width="900"/>
 
-📐 Key Features
-Dynamic KPI Cards:
+<img src="https://github.com/user-attachments/assets/208488d4-dd1d-43e6-aec8-1bc94831e94c" alt="Power BI dashboard page 3" width="900"/>
 
-Total Sales, Plan Completion %, Year-over-Year Growth %
+<img src="https://github.com/user-attachments/assets/c1421194-2ab0-415e-aea7-e5bf1489d807" alt="Power BI dashboard page 4" width="900"/>
 
-Visualizations:
+<img src="https://github.com/user-attachments/assets/e03ece28-1ffe-4901-807a-4fbbb8f48d31" alt="Power BI dashboard page 5" width="900"/>
 
-Monthly trend lines for actual vs. plan
+<img src="https://github.com/user-attachments/assets/001b2c94-db96-4932-b9bd-a573b0ecf010" alt="Power BI dashboard page 6" width="900"/>
 
-Store-level performance ranking
+## Gallery
 
-Product group & regional breakdowns
+**Data flow**
 
-DAX Measures:
+![Data flow](assets/dataflow.png)
 
-Plan Completion Rate = (Actual Sales / Planned Sales) * 100
+**Data model**
 
-YoY Growth %
+![Data model](assets/data-model.png)
 
-Rolling 12-Month Trend calculations
+**Insight: actual vs plan**
 
-📈 Insights Enabled
-Identify top-performing stores and those at risk of missing targets.
+![Insight: actual vs plan](assets/insight-actual-vs-plan.png)
 
-Track seasonal and yearly growth patterns.
+**Insight: plan completion by district**
 
-
-Monitor execution gaps at regional and product category levels.
-
-Provide executives with data-driven decision-making tools.
-
-<img width="1704" height="1312" alt="image" src="https://github.com/user-attachments/assets/3b11928f-2851-4abe-a450-519c5c9b93f9" />
-<img width="1967" height="1106" alt="image" src="https://github.com/user-attachments/assets/208488d4-dd1d-43e6-aec8-1bc94831e94c" />
-<img width="1959" height="1101" alt="image" src="https://github.com/user-attachments/assets/c1421194-2ab0-415e-aea7-e5bf1489d807" />
-<img width="1962" height="1093" alt="image" src="https://github.com/user-attachments/assets/e03ece28-1ffe-4901-807a-4fbbb8f48d31" />
-<img width="1969" height="1080" alt="image" src="https://github.com/user-attachments/assets/001b2c94-db96-4932-b9bd-a573b0ecf010" />
-
-
-
+![Insight: plan completion by district](assets/insight-plan-completion-by-district.png)
 
