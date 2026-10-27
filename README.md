@@ -40,17 +40,41 @@ Galaxy-schema modeling · DAX time intelligence · Power Query data preparation 
 
 ## Power BI dashboard
 
-<img src="https://github.com/user-attachments/assets/fbd4701f-b4f5-4039-847d-b2f5f0c1134b" alt="Power BI dashboard page 1" width="900"/>
+### Main report (`KPIM Mart Sales Report Datathon 3.pbix`)
 
-<img src="https://github.com/user-attachments/assets/3b11928f-2851-4abe-a450-519c5c9b93f9" alt="Power BI dashboard page 2" width="900"/>
+**Sales report: this month and year to date vs. last year**
 
-<img src="https://github.com/user-attachments/assets/208488d4-dd1d-43e6-aec8-1bc94831e94c" alt="Power BI dashboard page 3" width="900"/>
+<img src="https://github.com/user-attachments/assets/208488d4-dd1d-43e6-aec8-1bc94831e94c" alt="Sales report page: monthly and year-to-date sales vs. last year" width="900"/>
 
-<img src="https://github.com/user-attachments/assets/c1421194-2ab0-415e-aea7-e5bf1489d807" alt="Power BI dashboard page 4" width="900"/>
+**Decomposition tree: year-to-date sales by store, brand, loyalty group, income, and promotion**
 
-<img src="https://github.com/user-attachments/assets/e03ece28-1ffe-4901-807a-4fbbb8f48d31" alt="Power BI dashboard page 5" width="900"/>
+<img src="https://github.com/user-attachments/assets/c1421194-2ab0-415e-aea7-e5bf1489d807" alt="Decomposition tree of year-to-date sales" width="900"/>
 
-<img src="https://github.com/user-attachments/assets/001b2c94-db96-4932-b9bd-a573b0ecf010" alt="Power BI dashboard page 6" width="900"/>
+**Sales analysis: sales vs. last year and vs. plan, by district, product, and manager**
+
+<img src="https://github.com/user-attachments/assets/e03ece28-1ffe-4901-807a-4fbbb8f48d31" alt="Sales analysis page: sales vs. last year and plan" width="900"/>
+
+**Detailed analysis: order-level table**
+
+<img src="https://github.com/user-attachments/assets/001b2c94-db96-4932-b9bd-a573b0ecf010" alt="Detailed analysis page: order-level table" width="900"/>
+
+### Extended report (`Capstone Project.pbix`)
+
+**District revenue plan: planned revenue by district, store, and month**
+
+![District revenue plan](assets/powerbi-page-1-district-revenue-plan.png)
+
+**District category table: revenue by district, store, and product category**
+
+![District category table](assets/powerbi-page-2-district-category-table.png)
+
+**Store and manager overview: actual vs. plan by district, store, and manager**
+
+![Store and manager overview](assets/powerbi-page-3-store-manager-overview.png)
+
+**Manager achievement: progress toward plan, growth by store, and monthly trends**
+
+![Manager achievement](assets/powerbi-page-4-manager-achievement.png)
 
 ## Gallery
 
