@@ -13,8 +13,8 @@ A Power BI dashboard (Aug 2025) for the KPIM Mart retail chain that compares **a
 ## Data model: galaxy schema
 Two fact tables share conformed dimensions, so actual and planned figures can be compared at any grain:
 
-- **Facts:** Sales (about 58K transaction lines) and Plan (monthly targets)
-- **Dimensions:** Store, Product, Category, Customer, Promotion, Date
+- **Facts:** `fact_sales` (about 58K transaction lines) and `fact_sales_plan` (monthly targets by district)
+- **Dimensions:** `dim_customer`, `dim_product`, `dim_promotion`, `dim_store`, `dim_date`, joined on surrogate keys (`customer_key`, `product_key`, `promotion_key`, `store_key`); the plan fact shares `dim_store` and `dim_date`
 
 ## Key measures (DAX)
 - Plan completion % = Actual ÷ Plan
@@ -63,6 +63,10 @@ _Diagrams are editable in draw.io: [`docs/diagrams/`](docs/diagrams)._
 **Galaxy schema: sales and plan facts on shared dimensions**
 
 ![Galaxy schema: sales and plan facts on shared dimensions](assets/data-model.png)
+
+**Power BI Model view (from Power BI Desktop)**
+
+![Power BI Model view](assets/powerbi-data-model.png)
 
 **Actual vs. plan revenue**
 
