@@ -54,19 +54,21 @@ Galaxy-schema modeling · DAX time intelligence · Power Query data preparation 
 
 ## Gallery
 
-**Data flow**
+_Diagrams are editable in draw.io: [`docs/diagrams/`](docs/diagrams)._
 
-![Data flow](assets/dataflow.png)
+**Data flow: workbook to SQL Server to Power BI**
 
-**Data model**
+![Data flow: workbook to SQL Server to Power BI](assets/dataflow.png)
 
-![Data model](assets/data-model.png)
+**Galaxy schema: sales and plan facts on shared dimensions**
 
-**Insight: actual vs plan**
+![Galaxy schema: sales and plan facts on shared dimensions](assets/data-model.png)
 
-![Insight: actual vs plan](assets/insight-actual-vs-plan.png)
+**Actual vs. plan revenue**
 
-**Insight: plan completion by district**
+![Actual vs. plan revenue](assets/insight-actual-vs-plan.png)
 
-![Insight: plan completion by district](assets/insight-plan-completion-by-district.png)
+**Plan completion by district**
+
+![Plan completion by district](assets/insight-plan-completion-by-district.png)
 
